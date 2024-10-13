@@ -1,0 +1,40 @@
+.beginnings-page .background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.beginnings-page .background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+  
+.beginnings-page .spacecraft {
+    position: absolute;
+    top: 50%; 
+    left: 10%;
+    width: 150px; 
+    height: auto;
+    opacity: 1; 
+    transform: translate(-50%, -50%);
+    transition: all 4.5s ease-in-out; 
+}
+  
+.beginnings-page .animate-spacecraft {
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    opacity: 1;
+}
+  
+.beginnings-page.fade-out {
+    opacity: 0; 
+    transition: opacity 3s ease-in-out; 
+}
+  

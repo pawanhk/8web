@@ -1,26 +1,36 @@
-import React, { useState } from 'react';  
+import React, { useState, useEffect } from 'react';  
 import { useNavigate, Link } from 'react-router-dom'; 
 
 // css imports
 import '../css/home.css';
 import spaceVideo from '../assets/space.mp4'; 
-import spaceCraft from '../assets/spacecraft .png'; 
+import spacecraft from '../assets/spacecraft .png'; 
 
-function App() {
-    // base states 
+
+function Home() {
     const [startClicked, setStartClicked] = useState(false);
+    const [newClicked, setNewClicked] = useState(false);
     const navigate = useNavigate();
+    
 
     // after clicking on the main button
     const startClick = () => {
         setStartClicked(true); 
         setTimeout(() => {
-            navigate('/editor');
-        }, 4000); 
+            navigate('/beginnings');
+        }, 3000); 
     };
+
+    const newClick = () => {
+      setNewClicked(true); 
+      setTimeout(() => {
+          navigate('/editor');
+      }, 0); 
+  };
 
     return (
         <>
+        <title> 8BIT </title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet"></link>
@@ -37,18 +47,16 @@ function App() {
             <div className="select">
               <button onClick={startClick}> START </button><br/>
 
-              <Link to="/editor">
-                <button> CONTINUE </button><br />
-              </Link>
+                <button onClick={newClick}> Editor </button><br />
 
               <p>made by pawan hk at HACK PSU 24</p>
             </div>
           </div>
 
-          <img src={spaceCraft} className="spacecraft" alt="spacecraft" /> 
+          <img src={spacecraft} className="spacecraft"/>
         </div>  
         </>
     );
 }
 
-export default App;
+export default Home;

@@ -66,29 +66,29 @@
     cursor: pointer;
 
     border: 2px solid white;
-    background-color: #4f1d6a;
+    color: purple;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 5px 10px white;
 }
 
-/* Slide-out animation */
 .slide-out{
     transform: translate(-150%, -50%);
     opacity: 0;
     transition: transform 5s ease, opacity 5s ease;
 }
-  
-/* Spacecraft Image Positioning and Animation */
-.spacecraft{
+
+.spacecraft {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 10%; 
     transform: translateY(-50%);
-    width: 300px;  /* Adjust the width to make it smaller */
-    height: auto;  /* Maintain the aspect ratio */
-    animation: moveUpDown 3s ease-in-out infinite; /* Infinite up and down animation */
-}
+    width: 150px;  
+    height: auto;  
+    transition: transform 10s ease-in-out;
+    animation: moveUpDown 3s ease-in-out infinite; 
+  }
+  
   
 @keyframes moveUpDown {
     0%{
@@ -102,4 +102,3 @@
     }
 }
 
-  
