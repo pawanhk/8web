@@ -1,0 +1,105 @@
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+  
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    z-index: 1; 
+}
+  
+.overlay h1{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 72px;
+}
+
+.overlay p{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.select{
+    font-family: "Pixelify Sans", sans-serif;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 40px;
+}
+  
+.select button{
+    font-family: "Pixelify Sans", sans-serif;
+    margin-bottom: 40px; 
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px white;
+}
+
+
+.select button:hover{
+    font-family: "Pixelify Sans", sans-serif;
+    margin-bottom: 40px; 
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+
+    border: 2px solid white;
+    background-color: #4f1d6a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px white;
+}
+
+/* Slide-out animation */
+.slide-out{
+    transform: translate(-150%, -50%);
+    opacity: 0;
+    transition: transform 5s ease, opacity 5s ease;
+}
+  
+/* Spacecraft Image Positioning and Animation */
+.spacecraft{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 300px;  /* Adjust the width to make it smaller */
+    height: auto;  /* Maintain the aspect ratio */
+    animation: moveUpDown 3s ease-in-out infinite; /* Infinite up and down animation */
+}
+  
+@keyframes moveUpDown {
+    0%{
+        transform: translateY(-50%);
+    }
+    50%{
+        transform: translateY(-40%);
+    }
+    100%{
+        transform: translateY(-50%);
+    }
+}
+
+  
